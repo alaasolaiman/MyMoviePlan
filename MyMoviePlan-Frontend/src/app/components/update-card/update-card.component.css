@@ -1,0 +1,43 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.movie-container {
+  margin-top: 100px;
+}
+
+.movie-container {
+  margin-top: 57px;
+  background-color: #343434;
+}
+
+.movie-container img {
+  height: 400px;
+  width: 100%;
+}
+
+.pay-button {
+  width: 100%;
+  height: 40px;
+}
+
+.movie-Details {
+  height: 400px;
+  width: 100%;
+}
+
+form input {
+  background-color: #ffc107;
+  color: #292b2c;
+
+}
+
+hr {
+  border: 3px solid #ffc107;
+  width: 100%;
+  border-radius: 5px;
+}
+
+label {
+  text-align: center;
+}

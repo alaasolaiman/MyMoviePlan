@@ -1,0 +1,39 @@
+.admin {
+  margin-top: 57px;
+}
+.card {
+  height: 400px;
+}
+.card img {
+  height: 300px;
+}
+
+hr {
+  border: 3px solid #ffc107;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.cardForm input{
+  border: 1px solid #ffc107;
+  border-radius: 0px !important;
+}
+
+.container-fluid {
+  background-color: #343434;
+}
+
+.card img {
+  height: 300px;
+  border-radius: 10px 10px 0 0;
+}
+
+.language-button {
+  height: 100%;
+
+}
+
+.genre-button {
+  height: 100%;
+
+}

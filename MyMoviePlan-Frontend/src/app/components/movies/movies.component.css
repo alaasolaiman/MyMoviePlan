@@ -1,0 +1,21 @@
+#carouselExampleCaptions {
+  margin-top: 57px;
+}
+.carousel-inner img {
+  width: 100%;
+  height: 350px;
+}
+.card {
+  height: 380px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+.card img {
+  height: 300px;
+  border-radius: 10px 10px 0 0 ;
+}
+
+.movies-conatainer {
+  background-color: #343434;
+}
+

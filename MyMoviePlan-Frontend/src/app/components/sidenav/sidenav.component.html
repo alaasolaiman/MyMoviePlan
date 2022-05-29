@@ -1,0 +1,92 @@
+ <nav id="sidebarMenu " class=" d-md-block sidebar sidenav ">
+      <div class="sidebar-sticky pt-3 ">
+
+
+          <div class="col-md-10 offset-md-1 col-12  ml-2 mt-4 mb-3">
+                <h5 class="text-dark bg-warning text-center mr-auto genre-title">Language</h5>
+                </div>
+        <ul class="nav flex-column  ml-5">
+          <!-- language checkbox -->
+
+
+          <div class="row ml-2 ">
+
+          <input class="mt-1" type="checkbox" id="english" name="english" value="english"  (click)="Filter(english)" #english>
+          <label class="ml-2 pb-1 text-warning font-weight-bold" for="english"> English</label>
+          </div>
+
+          <div class="row ml-2">
+          <input class="mt-1" type="checkbox" id="arabic" name="arabic" value="arabic" (click)="Filter(arabic)" #arabic>
+          <label class="ml-2 pb-1 text-warning font-weight-bold" for="arabic"> Arabic</label>
+          </div>
+
+          <div class="row ml-2">
+          <input class="mt-1" type="checkbox" id="french" name="french" value="french" (click)="Filter(french)" #french>
+          <label class="ml-2 pb-1 text-warning font-weight-bold" for="french"> French</label>
+          </div>
+
+          <div class="row ml-2">
+          <input class="mt-1" type="checkbox" id="spanish" name="spanish" value="spanish" (click)="Filter(spanish)" #spanish>
+          <label class="ml-2 pb-1 text-warning font-weight-bold" for="spanish"> Spanish</label>
+          </div>
+
+          <div class="row ml-2">
+          <input class="mt-1" type="checkbox" id="russian" name="russian" value="russian"  (click)="Filter(russian)" #russian>
+          <label class="ml-2 pb-1 text-warning font-weight-bold" for="russian"> Russian</label>
+          </div>
+
+          <div class="row ml-2">
+          <input class="mt-1" type="checkbox" id="hindi" name="hindi" value="hindi"  (click)="Filter(hindi)" #hindi>
+          <label class="ml-2 pb-1 text-warning font-weight-bold" for="hindi"> Hindi</label>
+          </div>
+
+
+
+        </ul>
+
+
+
+          <div class="col-md-10 offset-md-1 col-12  ml-2 mt-4 mb-3">
+                <h5 class="text-dark bg-warning text-center mr-auto genre-title">Genre</h5>
+                </div>
+        <ul class="nav flex-column  ml-5">
+
+
+          <!-- genre checkbox -->
+
+          <div class="row ml-2">
+
+          <input class="mt-1" type="checkbox" id="action" name="action" value="action"  (click)="Filter(action)" #action>
+          <label class="ml-2 pb-1 text-warning font-weight-bold" for="action"> Action</label>
+          </div>
+
+          <div class="row ml-2">
+          <input class="mt-1" type="checkbox" id="romance" name="romance" value="romance" (click)="Filter(romance)" #romance>
+          <label class="ml-2 pb-1 text-warning font-weight-bold" for="romance"> Romance</label>
+          </div>
+
+          <div class="row ml-2">
+          <input class="mt-1" type="checkbox" id="drama" name="drama" value="drama" (click)="Filter(drama)" #drama>
+          <label class="ml-2 pb-1 text-warning font-weight-bold" for="drama"> Drama</label>
+          </div>
+
+          <div class="row ml-2">
+          <input class="mt-1" type="checkbox" id="thriller" name="thriller" value="thriller" (click)="Filter(thriller)" #thriller>
+          <label class="ml-2 pb-1 text-warning font-weight-bold" for="thriller"> Thriller</label>
+          </div>
+
+          <div class="row ml-2">
+          <input class="mt-1" type="checkbox" id="horror" name="horror" value="horror"  (click)="Filter(horror)" #horror>
+          <label class="ml-2 pb-1 text-warning font-weight-bold" for="horror"> Horror</label>
+          </div>
+
+          <div class="row ml-2">
+          <input class="mt-1" type="checkbox" id="comedy" name="comedy" value="comedy"  (click)="Filter(comedy)" #comedy>
+          <label class="ml-2 pb-1 text-warning font-weight-bold" for="comedy"> Comedy</label>
+          </div>
+
+
+
+        </ul>
+      </div>
+    </nav>

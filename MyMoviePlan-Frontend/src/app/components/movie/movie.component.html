@@ -1,0 +1,26 @@
+  <div class="conatainer-fluid movie-container">
+    <div class="row">
+      <div class=" col-md-5">
+         <img class="mt-5 ml-3" [src]="card.imageUrl"  alt="..." />
+          </div>
+            <div class="col-7 ">
+              <div class="row bg-warning mt-5 movie-Details">
+                    <h2 class="mt-3 col-12 ">Title: {{ card.title }}</h2>
+                    <h4 class="col-4">language: {{ card.language }}</h4>
+                    <h4 class="col-4">Genre: {{ card.genre }}</h4>
+                    <h4 class="col-4">Date: {{ card.date }}</h4>
+                    <h2 class="col-6">Place: {{ card.place }} </h2>
+                    <h2 class="col-12">Price: {{ card.price }} $</h2>
+         </div>
+      </div>
+          <div class="col-10 ">
+              <h3 class="mt-5 ml-3 text-warning"><h2>Description:</h2>{{ card.description }}</h3>
+          </div>
+
+          <div class="col-2 offset-5">
+            <button type="button" class="btn bg-warning text-dark mt-3 mb-5 ml-auto pay-button">Pay</button>
+          </div>
+
+  </div>
+</div>
+
