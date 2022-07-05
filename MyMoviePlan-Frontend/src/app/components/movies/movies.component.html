@@ -1,0 +1,74 @@
+<!-- <button type="button" class="btn" (click)="searched() ">show</button> -->
+
+<div class="conatiner-fluid movies-conatainer">
+  <div class="row">
+    <!-- carousel -->
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide  col-12"
+      data-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active"  *ngIf="cards != []">
+          <img  [src]="cards[0].imageUrl" class="d-block w-100" alt="..." />
+
+        </div>
+        <div *ngIf="cards != []">
+        <div class="carousel-item" *ngFor="let card of cards.slice(1,3)">
+
+          <img [src]="card.imageUrl" class="d-block w-100" alt="..." />
+
+        </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-target="#carouselExampleCaptions"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-target="#carouselExampleCaptions"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon " aria-hidden="true"></span>
+        <span class="sr-only ">Next</span>
+      </button>
+    </div>
+  </div>
+  <!-- card -->
+  <div class="row ">
+    <div class="col-3 ">
+      <app-sidenav></app-sidenav></div>
+    <div class="col-9  mt-3">
+      <div class="row">
+
+        <section *ngFor="let card of cards.slice(3)">
+        <div class="col-md-6 col-lg-4"  *ngIf="
+                card.title.toLowerCase().includes(search.toLowerCase()) &&
+                (filterContainer.length == 0 || filterContainer.includes(card.language) || filterContainer.includes(card.genre) )">
+
+                <a routerLink="/movie" (click)="sendDataToMovie(card.id)">
+            <div
+              class="card bg-dark"
+              style="width: 18rem"
+
+            >
+              <img [src]="card.imageUrl" class="card-img-top" alt="..." />
+              <h3 class="text-warning text-center">{{ card.title }} </h3>
+               <h5 class="text-warning text-center">language: {{ card.language }}</h5>
+            </div>
+          </a>
+        </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+

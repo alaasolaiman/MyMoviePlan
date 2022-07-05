@@ -1,0 +1,128 @@
+<div class="container-fluid admin">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-center text-warning">add movie</h1>
+    </div>
+
+  <form
+    [formGroup]="cardForm"
+    (ngSubmit)="cardSubmit(cardForm)"
+    class="col-6 offset-3 cardForm row "
+  >
+
+    <input
+      type="text"
+      class="form-control text-center col-6 mt-2"
+      id="imageUrl"
+      placeholder="imageUrl"
+      formControlName="imageUrl"
+    />
+
+
+    <input
+      type="text"
+      class="form-control text-center col-6 mt-2"
+      id="title"
+      placeholder="title"
+      formControlName="title"
+    />
+
+
+
+    <!-- Genre drop down -->
+    <div class="col-6 mt-2">
+    <label class="text-warning col-4 font-weight-bold" for="genre ">genre: </label>
+
+    <select
+      class="bg-warning  col-8 genre-button "
+      name="genre"
+      id="genre-button"
+      formControlName="genre"
+    >
+      <option value="action" selected>Action</option>
+      <option value="romance" >Romance</option>
+      <option value="drama">Drama</option>
+      <option value="thriller" >Thriller</option>
+      <option value="horror" >Horror</option>
+      <option value="comedy">Comedy</option>
+    </select>
+    </div>
+
+    <!-- language drop down -->
+    <div class="col-6 mt-2 ">
+    <label class="text-warning col-4 font-weight-bold" for="language ">Language: </label>
+
+    <select
+      class="bg-warning  col-8 language-button"
+      name="language"
+      id="language-button"
+      formControlName="language"
+    >
+      <option value="english" selected>English</option>
+      <option value="arabic" >Arabic</option>
+      <option value="french">French</option>
+      <option value="english" >Spanish</option>
+      <option value="arabic" >Russian</option>
+      <option value="hindi">Hindi</option>
+    </select>
+    </div>
+
+    <input
+      type="text"
+      class="form-control text-center col-6 mt-2"
+      id="price"
+      placeholder="price"
+      formControlName="price"
+    />
+
+
+
+    <input
+      type="text"
+      class="form-control text-center col-6 mt-2"
+      id="place"
+      placeholder="place"
+      formControlName="place"
+    />
+    <input
+      type="text"
+      class="form-control text-center col-6 mt-2"
+      id="description"
+      placeholder="description"
+      formControlName="description"
+    />
+
+    <input
+      type="date"
+      class="form-control text-center col-6 mt-2"
+      id="date"
+      placeholder="date"
+      formControlName="date"
+    />
+
+    <button type="submit" class="btn bg-warning col-12 mt-2">add movie</button>
+  </form>
+  </div>
+  <hr />
+
+  <h1 class="text-center text-warning">manage movies</h1>
+  <!-- card -->
+
+  <div class="row mt-2 ml-5 mt-3">
+    <div class="col-md-6 col-lg-4" *ngFor="let card of cards">
+      <div
+        class="card ml-4 mt-4  bg-dark"
+        style="width: 18rem"
+        *ngIf="card.title.toLowerCase().includes(search.toLowerCase())"
+      >
+        <a routerLink="/updateCard" (click)="sendDataToMovie(card.id)">
+          <img [src]="card.imageUrl" class="card-img-top" alt="..." />
+          <h4 class="text-warning text-center">{{ card.title }}</h4>
+        </a>
+        <button type="button" class="btn text-danger text-center" (click)="deleteCard(card.id)">
+          <h4>Delete </h4>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

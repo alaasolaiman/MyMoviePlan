@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-warning ">
+  <a class="navbar-brand text-warning" id="MyMoviePlan" routerLink="/home">MyMoviePlan</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" value="" name="search" [(ngModel)]="search">
+      <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" (click)="searchFun(search)">Search</button>
+    </form>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active mr-3">
+        <a class="nav-link text-warning font-weight-bold login" routerLink="/login">sign in </a>
+      </li>
+
+     
+
+    </ul>
+
+  </div>
+</nav>
